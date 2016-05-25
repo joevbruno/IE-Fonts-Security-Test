@@ -1,0 +1,16 @@
+{
+  "name": "font-load-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "opentype": "^0.1.2",
+    "opentype.js": "^0.6.3",
+    "webpack": "^1.13.1"
+  }
+}

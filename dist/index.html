@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Fonts Test.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fonts Test</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Test">
+
+    <script src="../node_modules/opentype.js/dist/opentype.min.js"></script>
+    <script>
+    opentype.load('./MaterialIcons-Regular.woff', function(err, font) {
+      if (err) {
+          alert('Could not load font: ' + err);
+      } else {
+          alert('font successfully loaded')
+      }
+    });
+    </script>
+    <style>
+      .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;  /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+
+        /* Support for IE. */
+        font-feature-settings: 'liga';
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Fonts Test</h1>
+    <i class="material-icons">face</i>
+
+  </body>
+</html>
