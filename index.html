@@ -15,20 +15,36 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Test">
 
-    <script src="./node_modules/opentype.js/dist/opentype.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
     <script>
-    opentype.load('./fonts/MaterialIcons-Regular.woff', function(err, font) {
-      if (err) {
-          alert('Could not load font: ' + err);
-      } else {
-          alert('font successfully loaded')
-      }
-    });
+      var x = WebFont.load({
+        custom: {
+          families: ['Material Icons']
+        },
+        loading: function() { console.log('loading'); },
+        active: function() { console.log('active'); },
+        inactive: function() { console.log('inactive'); },
+        fontloading: function() { console.log('fontloading'); },
+        fontactive: function() { console.log('fontactive'); },
+        fontinactive: function() { console.log('fontinactive'); }
+      });
+      console.log(x);
     </script>
     <style>
+    @font-face {
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Material Icons'),
+           local('MaterialIcons-Regular'),
+           url('./fonts/MaterialIcons-Regular.woff') format('woff'),
+           url('./fonts/MaterialIcons-Regular.woff2') format('woff2'),
+           url('./fonts/MaterialIcons-Regular.ttf') format('truetype')
+    }
       .material-icons {
         font-family: 'Material Icons';
         font-weight: normal;
+        background: red;
         font-style: normal;
         font-size: 24px;  /* Preferred icon size */
         display: inline-block;
